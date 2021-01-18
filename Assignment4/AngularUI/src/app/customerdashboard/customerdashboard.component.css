@@ -1,0 +1,43 @@
+/* th{
+     
+    padding: 10px;
+    width: 40%;
+    margin-left: left;
+}
+/* table {
+   
+    padding: 10px;
+    width: 60%;
+  
+} 
+.center {
+    margin: auto;
+    width: 60%;
+   
+    padding: 10px;
+  }
+  td{
+    padding: 5px;
+    
+  } */
+  .logo-image{
+   
+    width: 250px;
+    height: 80px ;
+   
+    margin-left: 40%;
+}
+.dropdown-menu {
+  position: relative; /* Sometimes needs !important */
+}
+table{
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 10%;
+}
+th,td{
+  padding: 15px;
+  text-align: left;
+}
+

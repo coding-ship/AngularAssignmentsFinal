@@ -1,0 +1,59 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+    <div class="logo-image">
+          <img src="https://www.jcrinc.com/-/media/enterprise-imagery/logos/jcr-r-mark.png?h=152&w=532&hash=B19DACCFCF1F6ACDB0D829B425801D6F" class="img-fluid">
+    </div>
+
+
+<div style="position:absolute; right:25px;"><a routerLink="/">LogOut</a></div>
+</nav>
+
+<br>
+<div style="margin-left: 80%;"><button class="btn btn-primary" (click)="addnew()">Add New Trace</button></div>
+<br><br>
+<div class="box">
+<table style = "position:relative;">
+   
+    <tr>
+       
+        <th>Tracer Name</th>
+        <th>Tracer Action</th>
+        <th>Observation Date</th>
+        <th>Observation Name</th>
+        <th>Total No. Of Observations</th>
+    </tr>
+    <tr *ngFor="let listdata of list">
+      
+        <td>{{listdata.tracername}}</td>
+        <td>
+       
+        <select id="traceraction" style="color: rgba(5, 6, 7, 0.774); background-color: wheat;"
+        (change) = "change($event,listdata)">
+          <option >
+          Select Action</option>
+        <option>
+         Edit</option>
+        <option>
+         Delete
+        </option>
+          </select>
+         <!--  <select  [(ngModel)]="action" (change)="changedata(listdata)">
+            <option value="editdata" selected>
+             editdata</option>
+            <option value="deletedata">
+             deletedata
+            </option>
+              </select> -->
+        </td> 
+        <td>{{listdata.observationdate}}</td>
+        <td>{{listdata.observationname}}</td>
+        <td style="text-align: center;">{{listdata.noobservation}}</td>
+        &nbsp; &nbsp;
+        <!-- <td><div class="input-group-addon">
+            <span class="glyphicon glyphicon-plus"></span> 
+           </div></td> -->
+       
+    </tr>
+</table> 
+</div>
